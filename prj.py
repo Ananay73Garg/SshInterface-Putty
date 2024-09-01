@@ -43,30 +43,7 @@ def putfile(a,lpth):
   cnopts.hostkeys = None  
   with pysftp.Connection(host = hostname,username=uid,password=pwd,cnopts=cnopts) as sftp: 
     sftp.put(lpth,rpth) 
-  
- 
- 
-pd.options.display.float_format = '{:.2f}'.format 
- 
-a = [] 
-x = [] 
-no = [] 
-year = [] 
-inp = [] 
- 
-assign=dict() 
-for i in range(9): 
-    assign[i+4] = i+10 
-for i in range(3): 
-    assign[i+1] = i+19 
- 
-def time_convert(sec): 
-    mins = sec // 60 
-    sec = sec % 60 
-    hours = mins // 60 
-    mins = mins % 60 
-    return "Time Lapsed = {0} hours   {1} minutes   {2} seconds".format(int(hours),int(mins),round(sec,2)) 
- 
+
  
  
 def getcode(): 
